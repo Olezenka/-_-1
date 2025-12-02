@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using РКИС_ЛР1.FolderModels;
 
 namespace РКИС_ЛР1
 {
@@ -16,7 +17,12 @@ namespace РКИС_ЛР1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+
+            Form tempForm = new Form();
+            UserControlName us = new UserControlName();
+            us.Dock = DockStyle.Fill;
+            tempForm.Controls.Add(us);
+            Application.Run(tempForm);
         }
     }
 }
